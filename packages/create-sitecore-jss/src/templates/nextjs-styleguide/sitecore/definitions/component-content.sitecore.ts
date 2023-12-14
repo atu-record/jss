@@ -51,8 +51,8 @@ function convertToItems(
   rootItemName: string,
   language: string
 ): ItemDefinition {
-  const itemPath = convertPhsyicalPathToItemRelativePath(data.path, basePath);
-  const name = itemPath.substr(itemPath.lastIndexOf('/') + 1);
+  const itemPath = convertPhysicalPathToItemRelativePath(data.path, basePath);
+  const name = itemPath.substring(itemPath.lastIndexOf('/') + 1);
 
   let result;
 
@@ -101,7 +101,7 @@ function convertToItems(
  * @param {string} physicalPath
  * @param {string} basePath
  */
-function convertPhsyicalPathToItemRelativePath(physicalPath: string, basePath: string) {
+function convertPhysicalPathToItemRelativePath(physicalPath: string, basePath: string) {
   const targetPathSeparator = '/';
 
   // normalize path separators to /
